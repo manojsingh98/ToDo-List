@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e32727, #06247feb);
+    padding: 10px;
+    font-family: "Nunito", sans-serif !important;
+
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 9;
+}
+
+.sub-container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 2.3rem;
+    border-radius: 1rem;
+    max-height: calc(100vh - 20px);
+    overflow-y: scroll;
+}
+
+.sub-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sub-container::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.sub-container h1 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    padding-left: 16px;
+}
+
+.search-box input {
+    padding: 8px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: "Nunito", sans-serif;
+    width: 70%;
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    font-family: "Nunito", sans-serif;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    background-color: #ff5944;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.list-container li {
+    list-style-type: none;
+    font-size: 18px;
+    padding: 12px 30px 2px 40px;
+    user-select: none;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.list-container li span {
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    top: 13px;
+    right: 1px;
+}
+
+.list-container li span:hover {
+    font-size: 18px;
+    transition: .3s;
+}
+
+.list-container li::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid gray;
+    left: 0;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.checked::before {
+    content: "✓" !important;
+    color: white;
+    position: absolute;
+    background-color: #e32727 !important;
+    text-align: center;
+    border: #e32727 !important;
+}
+
+@media screen and (max-width:767px) {
+    .sub-container {
+        padding: 10px 1rem 16px;
+    }
+}
