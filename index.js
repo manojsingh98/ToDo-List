@@ -20,12 +20,12 @@ listItem.addEventListener(
   "click",
   function (e) {
     e.preventDefault();
-    console.log("outer",e);
+    // console.log("outer",e);
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
       saveData()
     } else if (e.target.tagName === "SPAN") {
-        console.log("click",e);
+        // console.log("click",e);
         e.target.parentElement.remove();
         saveData()
     }
